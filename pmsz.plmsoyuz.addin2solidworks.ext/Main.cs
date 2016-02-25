@@ -9,6 +9,8 @@ using pmsz.plmsoyuz.addin2solidworks.Documents;
 using ProgramSoyuz.AddinSupport.DataModel;
 using System.Diagnostics;
 
+using System.Runtime.InteropServices;
+
 using System.Windows.Forms;
 using SolidWorks.Interop.swconst;
 using System.Collections;
@@ -23,7 +25,8 @@ using pmsz.plmsoyuz.addin2solidworks.ext.UI;
 namespace pmsz.plmsoyuz.addin2solidworks.ext
 {
     [PLMConfigurationModule]
-    public class SWAddinExtension : ISolidWorksClientModule, ICustomModuleFunction, ISolidWorksClientModule2
+    [Guid("446EEF6D-4B9B-4B92-ACE2-541E2D1097DD"), ComVisible(true)]
+    public class SWAddinExtension : ISolidWorksClientModule2, ICustomModuleFunction
     {
         ISldWorks _swApp;
         IPlmAddin _swAddin;
@@ -55,6 +58,7 @@ namespace pmsz.plmsoyuz.addin2solidworks.ext
         // Размеры основной надписи с учётом рамки
         const double c_width = 0.19, c_height = 0.07, c_topmargin = 0.025;
 
+
         #region Implementation of IAddinClientModule
 
         public void OnUnload()
@@ -71,6 +75,7 @@ namespace pmsz.plmsoyuz.addin2solidworks.ext
 
         public void OnAfterUICreated()
         {
+            MessageBox.Show("OnAfterUICreated");
             // Здесь можно добавить комманды в солид, подписаться на события солида и т.п.
 
             AddinUIworks.RefreshUI();
@@ -89,7 +94,8 @@ namespace pmsz.plmsoyuz.addin2solidworks.ext
         }
 
         public void OnLoad(ISolidWorksCallback addinCallback)
-        {          
+        {
+            MessageBox.Show("OnLoad");
             _swApp = addinCallback.SWApp;
             _swAddin = addinCallback.Addin;
 
@@ -555,5 +561,6 @@ namespace pmsz.plmsoyuz.addin2solidworks.ext
         }
 
         #endregion
+
     }
 }
