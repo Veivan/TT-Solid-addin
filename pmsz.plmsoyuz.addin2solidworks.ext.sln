@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pmsz.plmsoyuz.addin2solidworks.ext", "pmsz.plmsoyuz.addin2solidworks.ext\pmsz.plmsoyuz.addin2solidworks.ext.csproj", "{D24C2BD7-FC81-4FB8-ABD0-5EA288131E2F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsApplication1", "..\HelloWin\WindowsApplication1\WindowsApplication1\WindowsApplication1.csproj", "{0FD33EF9-9F8C-41C4-B61E-5AADFFB23810}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug 2006|Any CPU = Debug 2006|Any CPU
+		Debug 2010|Any CPU = Debug 2010|Any CPU
+		Debug 2012|Any CPU = Debug 2012|Any CPU
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D24C2BD7-FC81-4FB8-ABD0-5EA288131E2F}.Debug 2006|Any CPU.ActiveCfg = Debug|Any CPU
+		{D24C2BD7-FC81-4FB8-ABD0-5EA288131E2F}.Debug 2006|Any CPU.Build.0 = Debug|Any CPU
+		{D24C2BD7-FC81-4FB8-ABD0-5EA288131E2F}.Debug 2010|Any CPU.ActiveCfg = Debug|Any CPU
+		{D24C2BD7-FC81-4FB8-ABD0-5EA288131E2F}.Debug 2010|Any CPU.Build.0 = Debug|Any CPU
+		{D24C2BD7-FC81-4FB8-ABD0-5EA288131E2F}.Debug 2012|Any CPU.ActiveCfg = Debug|Any CPU
+		{D24C2BD7-FC81-4FB8-ABD0-5EA288131E2F}.Debug 2012|Any CPU.Build.0 = Debug|Any CPU
+		{D24C2BD7-FC81-4FB8-ABD0-5EA288131E2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D24C2BD7-FC81-4FB8-ABD0-5EA288131E2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D24C2BD7-FC81-4FB8-ABD0-5EA288131E2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D24C2BD7-FC81-4FB8-ABD0-5EA288131E2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0FD33EF9-9F8C-41C4-B61E-5AADFFB23810}.Debug 2006|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FD33EF9-9F8C-41C4-B61E-5AADFFB23810}.Debug 2006|Any CPU.Build.0 = Debug|Any CPU
+		{0FD33EF9-9F8C-41C4-B61E-5AADFFB23810}.Debug 2010|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FD33EF9-9F8C-41C4-B61E-5AADFFB23810}.Debug 2010|Any CPU.Build.0 = Debug|Any CPU
+		{0FD33EF9-9F8C-41C4-B61E-5AADFFB23810}.Debug 2012|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FD33EF9-9F8C-41C4-B61E-5AADFFB23810}.Debug 2012|Any CPU.Build.0 = Debug|Any CPU
+		{0FD33EF9-9F8C-41C4-B61E-5AADFFB23810}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FD33EF9-9F8C-41C4-B61E-5AADFFB23810}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FD33EF9-9F8C-41C4-B61E-5AADFFB23810}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FD33EF9-9F8C-41C4-B61E-5AADFFB23810}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		VisualSVNWorkingCopyRoot = .
+	EndGlobalSection
+EndGlobal
