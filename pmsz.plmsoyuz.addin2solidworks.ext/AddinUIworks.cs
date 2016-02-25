@@ -26,7 +26,7 @@ namespace pmsz.plmsoyuz.addin2solidworks.ext.UI
         /// </summary>
         public static void RefreshUI()
         {
-            CommandTab cmdTab = SwAddin.Instance.CmdMgr.GetCommandTab(doctype, Title);
+            CommandTab cmdTab = SwAddin.Instance.UiManager.CmdMgr.GetCommandTab(doctype, Title);
             if (cmdTab == null) return;
             PrepareCmd();
             if (NeedRecreate())
@@ -42,7 +42,7 @@ namespace pmsz.plmsoyuz.addin2solidworks.ext.UI
         /// </summary>
         public static void ClearCommandMgr()
         {
-            SwAddin.Instance.CmdMgr.RemoveCommandGroup(UserID);
+            SwAddin.Instance.UiManager.CmdMgr.RemoveCommandGroup(UserID);
         }
 
         /// <summary>
@@ -50,7 +50,7 @@ namespace pmsz.plmsoyuz.addin2solidworks.ext.UI
         /// </summary>
         private static void PrepareCmd()
         {
-            var cmdGroup = SwAddin.Instance.CmdMgr.CreateCommandGroup(UserID, "Техтребования", "", "", -1);
+            var cmdGroup = SwAddin.Instance.UiManager.CmdMgr.CreateCommandGroup(UserID, "Техтребования", "", "", -1);
             var strResourcePath = GetResourcePath();
             cmdGroup.LargeIconList = strResourcePath + "ToolBarTT.bmp";
             cmdGroup.SmallIconList = strResourcePath + "ToolBarTT.bmp";

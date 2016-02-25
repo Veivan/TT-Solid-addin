@@ -71,9 +71,6 @@ namespace pmsz.plmsoyuz.addin2solidworks.ext
 
         public void OnAfterUICreated()
         {
-            _swApp = addinCallback.SWApp;
-            _swAddin = addinCallback.Addin;
-
             // Здесь можно добавить комманды в солид, подписаться на события солида и т.п.
 
             AddinUIworks.RefreshUI();
@@ -91,14 +88,13 @@ namespace pmsz.plmsoyuz.addin2solidworks.ext
             bool added = _swApp.AddToolbarCommand2(addinID, ToolbarId, 11, "CallBackFunction(RefreshTT)", "", "", "Обновить ТТ");  */
         }
 
-/*        public void OnLoad(ISolidWorksCallback addinCallback)
-        {
+        public void OnLoad(ISolidWorksCallback addinCallback)
+        {          
             _swApp = addinCallback.SWApp;
             _swAddin = addinCallback.Addin;
 
             // Здесь можно добавить комманды в солид, подписаться на события солида и т.п.
-
-            AddinUIworks.RefreshUI();
+            //AddinUIworks.RefreshUI();           
 
             // Создание пункта меню "Обновить ТТ"
             /* int addinID = SwAddin.Instance.SWAddinID;
@@ -111,7 +107,12 @@ namespace pmsz.plmsoyuz.addin2solidworks.ext
             // Это не срабатывает!!! Панель пропадает после загрузки чертежа.
             ToolbarId = _swApp.AddToolbar4(addinID, "Союз-PLM2", ToolbarImgSmPath, ToolbarImgLgPath, 0, (int)swDocumentTypes_e.swDocDRAWING); 
             bool added = _swApp.AddToolbarCommand2(addinID, ToolbarId, 11, "CallBackFunction(RefreshTT)", "", "", "Обновить ТТ");  */
-        } 
+        }
+
+        // Пустая реализация интерфейса
+        public int GetCommandTabId() { return 0;}
+        public int OnBeforeCommandGroupCreate(UIManager.SWUICommadGroup menu, ref string titel, List<string> commands) { return 0; }
+        public void OnCommandBoxCreated(UIManager.SWUICommandBox box, swDocumentTypes_e docType, Dictionary<string, int> commands) { } 
 
         public void RefreshTT()
         {
