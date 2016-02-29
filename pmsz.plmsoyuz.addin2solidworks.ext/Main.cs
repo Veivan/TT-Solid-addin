@@ -26,7 +26,7 @@ namespace pmsz.plmsoyuz.addin2solidworks.ext
 {
     [PLMConfigurationModule]
     [Guid("446EEF6D-4B9B-4B92-ACE2-541E2D1097DD"), ComVisible(true)]
-    public class SWAddinExtension : ISolidWorksClientModule2, ICustomModuleFunction
+    public class SWAddinExtension : ISolidWorksClientModule, ICustomModuleFunction
     {
         ISldWorks _swApp;
         IPlmAddin _swAddin;
@@ -75,32 +75,21 @@ namespace pmsz.plmsoyuz.addin2solidworks.ext
 
         public void OnAfterUICreated()
         {
-            MessageBox.Show("OnAfterUICreated");
+//            MessageBox.Show("OnAfterUICreated");
             // Здесь можно добавить комманды в солид, подписаться на события солида и т.п.
 
-            AddinUIworks.RefreshUI();
+           // AddinUIworks.RefreshUI();
 
-            // Создание пункта меню "Обновить ТТ"
-            /* int addinID = SwAddin.Instance.SWAddinID;
-            var strResourcePath = AddinUIworks.GetResourcePath() + "Logo16.bmp";
-            var ToolbarImgLgPath = AddinUIworks.GetResourcePath() + "ToolbarLarge.bmp";
-            var ToolbarImgSmPath = AddinUIworks.GetResourcePath() + "ToolbarSmall.bmp";
-            // Название пункта меню - "Союз-PLM " - обязательно с пробелом в конце!!!
-            int cmdIndex0 = _swApp.AddMenuItem4((int)swDocumentTypes_e.swDocDRAWING, addinID, "Обновить ТТ@Союз-PLM ", 13, "CallBackFunction(RefreshTT)", "", "", strResourcePath);
-            
-            // Это не срабатывает!!! Панель пропадает после загрузки чертежа.
-            ToolbarId = _swApp.AddToolbar4(addinID, "Союз-PLM2", ToolbarImgSmPath, ToolbarImgLgPath, 0, (int)swDocumentTypes_e.swDocDRAWING); 
-            bool added = _swApp.AddToolbarCommand2(addinID, ToolbarId, 11, "CallBackFunction(RefreshTT)", "", "", "Обновить ТТ");  */
         }
 
         public void OnLoad(ISolidWorksCallback addinCallback)
         {
-            MessageBox.Show("OnLoad");
+//            MessageBox.Show("OnLoad");
             _swApp = addinCallback.SWApp;
             _swAddin = addinCallback.Addin;
 
             // Здесь можно добавить комманды в солид, подписаться на события солида и т.п.
-            //AddinUIworks.RefreshUI();           
+            AddinUIworks.RefreshUI();           
 
             // Создание пункта меню "Обновить ТТ"
             /* int addinID = SwAddin.Instance.SWAddinID;
