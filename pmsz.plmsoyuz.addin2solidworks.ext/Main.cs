@@ -26,7 +26,7 @@ namespace pmsz.plmsoyuz.addin2solidworks.ext
 {
     [PLMConfigurationModule]
     [Guid("446EEF6D-4B9B-4B92-ACE2-541E2D1097DD"), ComVisible(true)]
-    public class SWAddinExtension : ISolidWorksClientModule, ICustomModuleFunction
+    public class SWAddinExtension : ISolidWorksClientModule2, ICustomModuleFunction
     {
         ISldWorks _swApp;
         IPlmAddin _swAddin;
@@ -78,7 +78,7 @@ namespace pmsz.plmsoyuz.addin2solidworks.ext
 //            MessageBox.Show("OnAfterUICreated");
             // Здесь можно добавить комманды в солид, подписаться на события солида и т.п.
 
-           // AddinUIworks.RefreshUI();
+           AddinUIworks.RefreshUI();
 
         }
 
@@ -89,7 +89,7 @@ namespace pmsz.plmsoyuz.addin2solidworks.ext
             _swAddin = addinCallback.Addin;
 
             // Здесь можно добавить комманды в солид, подписаться на события солида и т.п.
-            AddinUIworks.RefreshUI();           
+            //AddinUIworks.RefreshUI();           
 
             // Создание пункта меню "Обновить ТТ"
             /* int addinID = SwAddin.Instance.SWAddinID;
