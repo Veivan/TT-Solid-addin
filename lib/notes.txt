@@ -1,0 +1,4 @@
+C:\Program Files\SolidWorks Corp\SolidWorks\api\redist\CLR2\SolidWorks.Interop.swconst.dll
+C:\Program Files\SolidWorks Corp\SolidWorks\api\redist\CLR2\SolidWorks.Interop.swpublished.dll
+
+их также можно взять из  C:\Program Files (x86)\Програмсоюз\PLM Framework\

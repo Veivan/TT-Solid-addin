@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>pmsz.plmsoyuz.addin2solidworks.ext</RootNamespace>
     <AssemblyName>pmsz.plmsoyuz.addin2solidworks.ext</AssemblyName>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
@@ -36,6 +36,7 @@
       <HintPath>..\lib\plm\Common.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="PLMDataModel">
       <HintPath>..\lib\plm\PLMDataModel.dll</HintPath>
       <Private>False</Private>
@@ -58,14 +59,15 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
       <Private>False</Private>
     </Reference>
-    <Reference Include="SolidWorks.Interop.swconst">
-      <HintPath>C:\Program Files\SolidWorks Corp\SolidWorks\api\redist\CLR2\SolidWorks.Interop.swconst.dll</HintPath>
+    <Reference Include="SolidWorks.Interop.swconst, Version=22.3.0.56, Culture=neutral, PublicKeyToken=19f43e188e4269d8, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\lib\SolidWorks.Interop.swconst.dll</HintPath>
     </Reference>
     <Reference Include="SolidWorks.Interop.swpublished, Version=22.3.0.56, Culture=neutral, PublicKeyToken=89a97bdc5284e6d8, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <EmbedInteropTypes>True</EmbedInteropTypes>
-      <HintPath>C:\Program Files\SolidWorks Corp\SolidWorks\api\redist\CLR2\SolidWorks.Interop.swpublished.dll</HintPath>
+      <HintPath>..\lib\SolidWorks.Interop.swpublished.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
